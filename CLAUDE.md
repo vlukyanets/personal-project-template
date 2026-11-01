@@ -18,6 +18,9 @@ notes here - if a rule applies to every agent, put it in `AGENTS.md` instead.
   copies `.env` and `CLAUDE.local.md` in. On exit, keep the worktree until its PR is
   merged; then remove it with `git worktree remove .claude/worktrees/<name>` and
   `git branch -d worktree-<name>`.
+- **File edits**: create and change files only with the `Edit` and `Write` tools - never
+  through Bash or Python (heredocs, `sed -i`, redirects, scripts that write files). Bash
+  and Python stay fine for running commands, tests and read-only inspection.
 - **Plan mode** for changes outside the Spec Kit cycle that are still more than a small fix.
 - **Learning loop**: when I correct you on something that will recur, propose a one-line
   addition to the *Gotchas* section of `AGENTS.md`.

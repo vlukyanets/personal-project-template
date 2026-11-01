@@ -108,6 +108,9 @@ itself is the point (user-facing copy that needs it, tests for Unicode handling)
   - Read, print or commit secrets (`.env`, keys) -> use the variable names in `.env.example`.
   - Skip, disable or weaken a failing test -> fix the code, or ask if the test is wrong.
   - Run destructive commands (`rm -rf`, `git reset --hard`, DB drops) -> ask me.
+  - Edit files through shell commands (heredoc `cat > file`, `sed -i`, `tee`, scripts that
+    write files) -> use the agent's file-editing tool, so every change is a reviewable
+    diff. Running shell or Python for anything else (tests, checks, search) is fine.
   - Edit Spec Kit's managed files (`.specify/templates/`, `.specify/scripts/`,
     `.claude/skills/speckit-*`) -> they're overwritten on upgrade; customise via a
     Spec Kit preset, or ask me.
